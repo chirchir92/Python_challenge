@@ -57,3 +57,27 @@ print(f"Total: ${n}")
 print(f"Average Change: {l}")
 print(f"Greatest Increase in Profits: {a} (${c})")
 print(f"Greatest Decrease in Profits: {b} (${d})")
+
+# declare the output file location 
+# in this case i used absolute path
+# not sure if this will open in TA computer since its relative to my computer root directory
+output = os.path.join("/Users/russ/Desktop/python_challenge/PyBank/Analysis/analysis.txt")
+with open(output,"w") as analysis:
+
+    # user writer to print to the desired txt file
+    writer = csv.writer(analysis)
+    analysis.write("Financial Analysis")
+    # used "\n" to skip a line in the txt file
+    # sourced the code from grepper https://www.codegrepper.com/search.php?answer_removed=1&q=how%20to%20print%20in%20python%20and%20skip%20a%20line
+    analysis.write("\n")
+    analysis.write("----------------------------------------")
+    analysis.write("\n")
+    analysis.write(f"Total Months:{k}")
+    analysis.write("\n")
+    analysis.write(f"Total: ${n}")
+    analysis.write("\n")
+    analysis.write(f"Average Change: {l}")
+    analysis.write("\n")
+    analysis.write(f"Greatest Increase in Profits: {a} (${c})")
+    analysis.write("\n")
+    analysis.write(f"Greatest Decrease in Profits: {b} (${d})")
